@@ -104,4 +104,15 @@
 
 [<img src="./pictures/get_range.png" width="50%"/>](./pictures/get_range.png)
 
-`GETRANGE color 0 1`
+`GETRANGE model 0 2`
+
+# SETRANGE
+
+`GET model`
+
+- This will return Toyota.
+
+`SETRANGE model 2 blue`
+`GET model`
+
+- This will return toblue
