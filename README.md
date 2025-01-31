@@ -70,3 +70,19 @@
 # SET and SETNX
 
 [<img src="./pictures/set_vs_setnx.png" width="50%"/>](./pictures/set_vs_setnx.png)
+
+# MSET can be used to set multitple key value pairs simultaneously.
+
+`SETEX color 2 red`
+
+`GET color`
+
+- This will return null after 2 seconds
+
+`MSET color red model toyota`
+`GET color`
+`GET model`
+
+[<img src="./pictures/mset.png" width="50%"/>](./pictures/mset.png)
+
+[<img src="./pictures/msetnx.png" width="50%"/>](./pictures/msetnx.png)
