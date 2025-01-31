@@ -59,4 +59,10 @@
 
 - Well, assume that we get some request in for news headlines and we want to respond to this request as fast as we possibly can. So our API might decide to first see if the latest headlines are stored inside of Redis at this point. If No data inside of your whatsoever. As soon as the API sees that no data is available inside of Redis, it might fall back as a second choice to trying to get some data out of our traditional database, which in general is probably going to be much slower than using Redis.
 
-- The API is going to get a copy of those latest headlines and send them back in response to whoever made that original request Simultaneously it might also store a copy of the latest headlines inside of Redis.
+- The API is going to get a copy of those latest headlines and send them back in response to whoever made that original request Simultaneously it might also store a copy of the latest headlines inside of Redis. When another request comes in for news headlines, the API might again check to see if the data is available in Redis. The API can take the data right here very, very quickly as it did not have to access the traditional database and immediately sent back a response right away.
+
+- But the downside here is that we might not have anything available for any other part of our application to automatically update the headlines inside of Redis. Remember, Redis, all of its data has to be stored in memory. So we can't always just put all of our headlines in Redis because we might eventually run out of memory. But to get around that problem, we might decide to automatically delete this particular headline after it has not been accessed in any way in some number of seconds or milliseconds, maybe after 10 seconds passed.
+
+# Set and setex
+
+[<img src="./pictures/setex_vs_set.png" width="50%"/>](./pictures/setex_vs_set.png)
