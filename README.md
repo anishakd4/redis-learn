@@ -63,6 +63,10 @@
 
 - But the downside here is that we might not have anything available for any other part of our application to automatically update the headlines inside of Redis. Remember, Redis, all of its data has to be stored in memory. So we can't always just put all of our headlines in Redis because we might eventually run out of memory. But to get around that problem, we might decide to automatically delete this particular headline after it has not been accessed in any way in some number of seconds or milliseconds, maybe after 10 seconds passed.
 
-# Set and setex
+# SET and SETEX
 
 [<img src="./pictures/setex_vs_set.png" width="50%"/>](./pictures/setex_vs_set.png)
+
+# SET and SETNX
+
+[<img src="./pictures/set_vs_setnx.png" width="50%"/>](./pictures/set_vs_setnx.png)
