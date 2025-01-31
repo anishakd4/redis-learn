@@ -86,3 +86,22 @@
 [<img src="./pictures/mset.png" width="50%"/>](./pictures/mset.png)
 
 [<img src="./pictures/msetnx.png" width="50%"/>](./pictures/msetnx.png)
+
+# MGET
+
+[<img src="./pictures/msetnx.png" width="50%"/>](./pictures/mget.png)
+
+# DEL
+
+[<img src="./pictures/del.png" width="50%"/>](./pictures/del.png)
+
+`DEL color`
+`GET color`
+
+- This will return null.
+
+# GETRANGE
+
+[<img src="./pictures/get_range.png" width="50%"/>](./pictures/get_range.png)
+
+`GETRANGE color 0 1`
