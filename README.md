@@ -48,3 +48,15 @@
 `GET color`
 
 - If we get after 2 seconds then we will get null value.
+
+- We just made use of the option EX. PX allows you to designate how long to wait in milliseconds. EXAT and PXAT allow to specify a date time. KEEPTTL means keep any expiration that has already been applied to this key.
+
+- Redis was originally designed as a caching server. That means that it's going to keep around some amount of data for some period of time and then eventually just plain get rid of it when it's not needed anymore.
+
+# News API redis example
+
+[<img src="./pictures/news-api-redis-example.png" width="50%"/>](./pictures/news-api-redis-example.png)
+
+- Well, assume that we get some request in for news headlines and we want to respond to this request as fast as we possibly can. So our API might decide to first see if the latest headlines are stored inside of Redis at this point. If No data inside of your whatsoever. As soon as the API sees that no data is available inside of Redis, it might fall back as a second choice to trying to get some data out of our traditional database, which in general is probably going to be much slower than using Redis.
+
+- The API is going to get a copy of those latest headlines and send them back in response to whoever made that original request Simultaneously it might also store a copy of the latest headlines inside of Redis.
