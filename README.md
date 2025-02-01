@@ -137,8 +137,16 @@
 `INCR age`
 `GET age`
 
+[<img src="./pictures/incrby_decrby.png" width="50%"/>](./pictures/incrby_decrby.png)
+
 `INCRBY age 20`
 `GET age`
 
 `DECRBY age 5`
 `GET age`
+
+[<img src="./pictures/incrbyfloat.png" width="50%"/>](./pictures/incrbyfloat.png)
+
+[<img src="./pictures/incrbyfloat_negative.png" width="50%"/>](./pictures/incrbyfloat_negative.png)
+
+`INCRBYFLOAT age -3.33 `
