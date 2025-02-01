@@ -136,3 +136,9 @@
 
 `INCR age`
 `GET age`
+
+`INCRBY age 20`
+`GET age`
+
+`DECRBY age 5`
+`GET age`
