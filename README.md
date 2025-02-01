@@ -150,3 +150,13 @@
 [<img src="./pictures/incrbyfloat_negative.png" width="50%"/>](./pictures/incrbyfloat_negative.png)
 
 `INCRBYFLOAT age -3.33 `
+
+# Redis is synchronous
+
+- Redis is synchronous and single threaded in nature. That means that even if a tremendous number of commands are coming in at exactly the same time, like the same microsecond, it doesn't make a difference to Redis. Redis only processes one command at a time in the order that they are received.
+
+[<img src="./pictures/redis_issue.png" width="50%"/>](./pictures/redis_issue.png)
+
+[<img src="./pictures/redis_synchronous_solution.png" width="50%"/>](./pictures/redis_synchronous_solution.png)
+
+[<img src="./pictures/redis_synchronous.png" width="50%"/>](./pictures/redis_synchronous.png)
