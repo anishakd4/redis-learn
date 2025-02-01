@@ -108,6 +108,8 @@
 
 # SETRANGE
 
+[<img src="./pictures/setrange.png" width="50%"/>](./pictures/setrange.png)
+
 `GET model`
 
 - This will return Toyota.
@@ -116,3 +118,21 @@
 `GET model`
 
 - This will return toblue
+
+# number commands
+
+[<img src="./pictures/number_commands.png" width="50%"/>](./pictures/number_commands.png)
+
+[<img src="./pictures/numbers_redis.png" width="50%"/>](./pictures/numbers_redis.png)
+
+- Internally, Redis is going to store that number as a string of 20. That's a string right there inside of Redis. It is understood to be a string. When we try to retrieve that value. So if we do a get age registers going to send back to us a string containing the number 20. And so inside of our app server, we have to take that string. We have to pass it to turn it into a plane number.
+
+[<img src="./pictures/incr_decr.png" width="50%"/>](./pictures/incr_decr.png)
+
+`SET age 20`
+
+`DECR age`
+`GET age`
+
+`INCR age`
+`GET age`
