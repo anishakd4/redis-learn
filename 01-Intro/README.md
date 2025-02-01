@@ -160,3 +160,7 @@
 [<img src="./pictures/redis_synchronous_solution.png" width="50%"/>](./pictures/redis_synchronous_solution.png)
 
 [<img src="./pictures/redis_synchronous.png" width="50%"/>](./pictures/redis_synchronous.png)
+
+# Quotes
+
+`SET news "Today's Headline" PX 3000`
