@@ -34,3 +34,15 @@
 [<img src="./pictures/hexists.png" width="50%"/>](./pictures/hexists.png)
 
 `HEXISTS company age`
+
+- So our command would return one if the key exists. If age did not exist for some reason, then we would get back zero. Redis is not checking for the truthiness of the value stored here. So age might refer to empty string or zero or false or otherwise or some falsy value.
+
+`DEL company`
+`HGETALL company`
+
+- This will return empty array now.
+
+[<img src="./pictures/hdel.png" width="50%"/>](./pictures/hdel.png)
+
+`HDEL company age`
+`HGETALL company`
