@@ -46,3 +46,31 @@
 
 `HDEL company age`
 `HGETALL company`
+
+`HINCRBY company age 10`
+`HGETALL company`
+
+- company age will be incremented by 10.
+
+`HINCRBY company anish 101`
+`HGETALL company`
+
+- A new key anish with value 101 will be created as the anish key didn't existed already.
+
+[<img src="./pictures/hincrby_hincrbyfloat.png" width="50%"/>](./pictures/hincrby_hincrbyfloat.png)
+
+`HINCRBYFLOAT company age 1.0001`
+`HGETALL company`
+
+- A float value will be added.
+
+[<img src="./pictures/hstrlen.png" width="50%"/>](./pictures/hstrlen.png)
+
+`HSTRLEN company name`
+
+[<img src="./pictures/hkeys.png" width="50%"/>](./pictures/hkeys.png)
+
+[<img src="./pictures/hvalues.png" width="50%"/>](./pictures/hvalues.png)
+
+`HKEYS company`
+`HVALS company`
