@@ -12,4 +12,4 @@
 
 [<img src="./pictures/pipeline_solution_2.png" width="50%"/>](./pictures/pipeline_solution_2.png)
 
-- So in one single connection, we can send off this big group of different `hgetall`, one for each individual card that we're trying to fetch. Redis understands this idea of batching commands together.
+- So in one single connection, we can send off this big group of different `hgetall`, one for each individual cars that we're trying to fetch. Redis understands this idea of batching commands together.
