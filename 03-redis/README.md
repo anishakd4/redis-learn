@@ -75,3 +75,11 @@
 `SMISMEMBER colors:1 red green blue`
 
 - The interesting thing here is that we are not going to get a result saying if any individual, one or all of them together inside of a set, we get back an array of results and the array says 1 if it is present, 0 if it's not.
+
+[<img src="./pictures/scard.png" width="50%"/>](./pictures/scard.png)
+
+`SCARD colors:1`
+`SCARD colors:2`
+`SCARD numbers`
+
+[<img src="./pictures/srem.png" width="50%"/>](./pictures/srem.png)
