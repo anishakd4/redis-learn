@@ -58,3 +58,14 @@
 `SDIFF colors:1 colors:2 colors:3`
 
 - the order of keys that you put in here makes a difference on the output. With `SINTER` and `SUNION` the order of keys we provide doesn't make any difference whatsoever. But because `SDIFF` is going to look at elements that are in the first set and no others really comes down to what is the first set that we are referencing.
+
+`SINTERSTORE colors:results colors:1 colors:2 colors:3`
+
+`SMEMBERS colors:results`
+
+- `SINTERSTORE` `SUNIONSTORE` `SDIFFSTORE` perform the same underlying operation as `SINTER` `SDIFF` `SUNIION` but these also store the results in a new key.
+
+[<img src="./pictures/sismember.png" width="50%"/>](./pictures/sismember.png)
+
+`SISMEMBER colors:1 red`
+`SISMEMBER colors: 1 purple`
