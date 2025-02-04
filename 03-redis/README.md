@@ -69,3 +69,9 @@
 
 `SISMEMBER colors:1 red`
 `SISMEMBER colors: 1 purple`
+
+[<img src="./pictures/smismember.png" width="50%"/>](./pictures/smismember.png)
+
+`SMISMEMBER colors:1 red green blue`
+
+- The interesting thing here is that we are not going to get a result saying if any individual, one or all of them together inside of a set, we get back an array of results and the array says 1 if it is present, 0 if it's not.
