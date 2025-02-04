@@ -83,3 +83,12 @@
 `SCARD numbers`
 
 [<img src="./pictures/srem.png" width="50%"/>](./pictures/srem.png)
+
+`SREM colors:1 red`
+`SMEMBERS colors:1`
+
+[<img src="./pictures/sscan.png" width="50%"/>](./pictures/sscan.png)
+
+[<img src="./pictures/sscan_doc.png" width="50%"/>](./pictures/sscan_doc.png)
+
+`SSCAN colors:2 0 COUNT 2`
