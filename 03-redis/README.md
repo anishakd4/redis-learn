@@ -148,3 +148,10 @@
 `ZCARD products`
 `ZPOPMAX products 1`
 `ZCARD products`
+
+[<img src="./pictures/zincrby_1.png" width="50%"/>](./pictures/zincrby_1.png)
+
+[<img src="./pictures/zincrby_2.png" width="50%"/>](./pictures/zincrby_2.png)
+
+`ZINCRBY products 15 keyboard`
+`ZSCORE products keyboard`
