@@ -18,9 +18,9 @@ export const getItems = async (ids: string[]) => {
 
 	const results = await Promise.all(commands);
 
-	results.map((result, i) => {
+	return results.map((result, i) => {
 		if (Object.keys(result).length !== 0) {
-			deserialize(ids[i], result);
+			return deserialize(ids[i], result);
 		}
 	});
 };

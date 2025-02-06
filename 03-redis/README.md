@@ -102,3 +102,41 @@
 [<img src="./pictures/set_use_case_2.png" width="50%"/>](./pictures/set_use_case_2.png)
 
 [<img src="./pictures/set_use_case_3.png" width="50%"/>](./pictures/set_use_case_3.png)
+
+# Sorted sets
+
+[<img src="./pictures/sorted_sets.png" width="50%"/>](./pictures/sorted_sets.png)
+
+- scores will always be numbers.
+
+[<img src="./pictures/zadd_zscore.png" width="50%"/>](./pictures/zadd_zscore.png)
+
+`ZADD products 45 monitor`
+
+`ZSCORE products monitor`
+
+- keep in mind that as we stored numbers inside of lettuce, all the implication here is that these are kind of being treated like strings. So when we get our score back, it is going to come back to us as a string. So for whatever different client library we are using, we might have to take that string and parse it into a number.
+
+[<img src="./pictures/zrem.png" width="50%"/>](./pictures/zrem.pngg)
+
+`ZREM products monitor`
+`ZSCORE products monitor`
+
+[<img src="./pictures/zadd_Arguments.png" width="50%"/>](./pictures/zadd_Arguments.png)
+
+- There are a variety of different arguments that we can append on to the ZADD command.
+
+[<img src="./pictures/zcard_zcount.png" width="50%"/>](./pictures/zcard_zcount.png)
+
+[<img src="./pictures/zcount_1.png" width="50%"/>](./pictures/zcount_1.png)
+
+[<img src="./pictures/zcount_2.png" width="50%"/>](./pictures/zcount_2.png)
+
+`ZCARD products`
+`ZADD products 45 cpu`
+`ZADD products 10 keyboard`
+`ZADD products 55 power`
+`ZCARD products`
+`ZCOUNT products 0 50`
+`ZCOUNT products (0 (55`
+`ZCOUNT products 15 +inf`
