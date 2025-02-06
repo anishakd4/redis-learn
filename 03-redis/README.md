@@ -92,3 +92,13 @@
 [<img src="./pictures/sscan_doc.png" width="50%"/>](./pictures/sscan_doc.png)
 
 `SSCAN colors:2 0 COUNT 2`
+
+# Sets uses
+
+[<img src="./pictures/set_uses.png" width="50%"/>](./pictures/set_uses.png)
+
+[<img src="./pictures/set_use_case_1.png" width="50%"/>](./pictures/set_use_case_1.png)
+
+[<img src="./pictures/set_use_case_2.png" width="50%"/>](./pictures/set_use_case_2.png)
+
+[<img src="./pictures/set_use_case_3.png" width="50%"/>](./pictures/set_use_case_3.png)
