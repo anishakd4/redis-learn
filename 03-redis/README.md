@@ -140,3 +140,11 @@
 `ZCOUNT products 0 50`
 `ZCOUNT products (0 (55`
 `ZCOUNT products 15 +inf`
+
+[<img src="./pictures/zpopmin_zpopmax.png" width="50%"/>](./pictures/zpopmin_zpopmax.png)
+
+`ZPOPMIN products 1`
+`ZPOPMIN products`
+`ZCARD products`
+`ZPOPMAX products 1`
+`ZCARD products`
