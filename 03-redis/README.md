@@ -155,3 +155,29 @@
 
 `ZINCRBY products 15 keyboard`
 `ZSCORE products keyboard`
+
+[<img src="./pictures/zrange.png" width="50%"/>](./pictures/zrange.png)
+
+`ZRANGE products 1 2 WITHSCORES`
+
+- index 1 to index 2 members and scores both
+
+`ZRANGE products 1 2 WITHSCORES`
+
+- index 1 to index 2 only members
+
+[<img src="./pictures/zrange_02.png" width="50%"/>](./pictures/zrange_02.png)
+
+`ZRANGE products 0 50 BYSCORE WITHSCORES`
+
+`ZRANGE products 0 (55 BYSCORE WITHSCORES`
+
+`ZRANGE products -INF (55 BYSCORE WITHSCORES`
+
+[<img src="./pictures/zrange_rev.png" width="50%"/>](./pictures/zrange_rev.png)
+
+`ZRANGE products 1 2 REV`
+
+[<img src="./pictures/zrange_limit.png" width="50%"/>](./pictures/zrange_limit.png)
+
+`ZRANGE products 0 60 BYSCORE LIMIT 1 2`
