@@ -92,3 +92,19 @@
 `RPUSH temps 30`
 
 `RPUSH temps 24`
+
+`LRANGE temps 0 3`
+
+`LRANGE temps 1 4`
+
+`LRANGE temps 1 345345`
+
+- We can go out of bounds.
+
+`LRANGE temps 0 -1`
+
+- starting to last.
+
+`LRANGE temps 0 -2`
+
+- starting to second last.
