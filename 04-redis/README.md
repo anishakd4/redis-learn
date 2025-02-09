@@ -51,6 +51,12 @@
 
 [<img src="./pictures/lists.png" width="50%"/>](./pictures/lists.png)
 
+[<img src="./pictures/list_commands.png" width="50%"/>](./pictures/list_commands.png)
+
+[<img src="./pictures/lpush_rpush.png" width="50%"/>](./pictures/lpush_rpush.png)
+
+[<img src="./pictures/llen_lindex.png" width="50%"/>](./pictures/llen_lindex.png)
+
 `LPUSH temps 25`
 
 `RPUSH temps 27`
@@ -73,8 +79,16 @@
 
 `LINDEX temps -3`
 
-[<img src="./pictures/list_commands.png" width="50%"/>](./pictures/list_commands.png)
+[<img src="./pictures/lrange.png" width="50%"/>](./pictures/lrange.png)
 
-[<img src="./pictures/lpush_rpush.png" width="50%"/>](./pictures/lpush_rpush.png)
+`DEL temps`
 
-[<img src="./pictures/llen_lindex.png" width="50%"/>](./pictures/llen_lindex.png)
+`RPUSH temps 25`
+
+`RPUSH temps 27`
+
+`RPUSH temps 25`
+
+`RPUSH temps 30`
+
+`RPUSH temps 24`
