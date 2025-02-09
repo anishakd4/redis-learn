@@ -141,3 +141,11 @@
 `LRANGE temps 0 -1`
 
 [<img src="./pictures/ltrim.png" width="50%"/>](./pictures/ltrim.png)
+
+`LINSERT temps AFTER 55 45`
+`LRANGE temps 0 -1`
+
+`LINSERT temps BEFORE 55 15`
+`LRANGE temps 0 -1`
+
+[<img src="./pictures/linsert.png" width="50%"/>](./pictures/linsert.png)
