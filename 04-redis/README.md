@@ -82,15 +82,10 @@
 [<img src="./pictures/lrange.png" width="50%"/>](./pictures/lrange.png)
 
 `DEL temps`
-
 `RPUSH temps 25`
-
 `RPUSH temps 27`
-
 `RPUSH temps 25`
-
 `RPUSH temps 30`
-
 `RPUSH temps 24`
 
 `LRANGE temps 0 3`
@@ -130,3 +125,12 @@
 `LPOS temps 25 COUNT 3`
 
 - We are not able to find three instances, so we're just gonna be told about the first two that were actually found.
+
+[<img src="./pictures/lpop_rpop.png" width="50%"/>](./pictures/lpop_rpop.png)
+
+`DEL temps`
+`RPUSH temps 25`
+`RPUSH temps 27`
+`RPUSH temps 25`
+`RPUSH temps 30`
+`RPUSH temps 24`
