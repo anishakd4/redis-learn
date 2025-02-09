@@ -134,3 +134,8 @@
 `RPUSH temps 25`
 `RPUSH temps 30`
 `RPUSH temps 24`
+
+[<img src="./pictures/lset.png" width="50%"/>](./pictures/lset.png)
+
+`LSET temps 1 35`
+`LRANGE temps 0 -1`
