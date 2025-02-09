@@ -139,3 +139,5 @@
 
 `LSET temps 1 35`
 `LRANGE temps 0 -1`
+
+[<img src="./pictures/ltrim.png" width="50%"/>](./pictures/ltrim.png)
