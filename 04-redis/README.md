@@ -1,1 +1,48 @@
-[<img src="./pictures/zincrby_2.png" width="50%"/>](./pictures/zincrby_2.png)
+# HyperLogsLogs
+
+[<img src="./pictures/hyperlogslogs.png" width="50%"/>](./pictures/hyperlogslogs.png)
+
+- This thing has a weird name, but it is a data type, just like all the other data types we have covered so far.
+- Hyperlogslogs are used whenever we want to keep track of the uniqueness of a collection of different elements, and specifically the approximate uniqueness.
+- You can think of a Hyperlogslogs as being similar to a set with the important distinction that it doesn't actually store any elements.
+
+[<img src="./pictures/pfadd_1.png" width="50%"/>](./pictures/pfadd_1.png)
+
+[<img src="./pictures/pfadd_2.png" width="50%"/>](./pictures/pfadd_2.png)
+
+- `PFADD` with some string or a number that's going to take that string or a number and we can imagine that it's going to add it into this Hyperlogslogs structure over here. Once we add the string in, it doesn't truly get stored inside the Hyperlogslogs. This thing has a very complex algorithm inside of it that looks at this string, does some parsing on it, does some very complex math, and kind of remembers that string, but it doesn't actually store per say.
+
+[<img src="./pictures/pfcount.png" width="50%"/>](./pictures/pfcount.png)
+
+- `PFCOUNT` allows us to look at a Hyperlogslogs and get an approximate count of the number of unique elements that have been added.
+
+`PFADD vegetables celery`
+`PFADD vegetables celery`
+
+- So when I run this command, I'm going to get back responsive 1. If I run this command a second time, I'm going to get back 0. So again, first time we add in a string, we get back a 1. Otherwise, if this thing has already been added, we get a 0.
+
+`PFADD vegetables potato`
+`PFADD vegetables potato`
+
+- Same as above.
+
+`PFCOUNT vegetables`
+
+[<img src="./pictures/views_problem.png" width="50%"/>](./pictures/views_problem.png)
+
+[<img src="./pictures/solution_1.png" width="50%"/>](./pictures/solution_1.png)
+
+[<img src="./pictures/solution_1_problem.png" width="50%"/>](./pictures/solution_1_problem.png)
+
+- You can imagine that if we have many different items or we have items with many more views than 1 million , well, this is going to start to get really expensive really quickly for such a simple little feature.
+
+[<img src="./pictures/solution_2.png" width="50%"/>](./pictures/solution_2.png)
+
+- So functionally as just about identical to the set implementation. But here's the difference, because the Hyperlogslogs does not actually truly store the individual records. So it doesn't actually store these usernames or the user IDs or anything like that. It has a constant size. It is always just about 12 kilobytes, no matter what, when stored inside of Redis.
+- So we could add in a million views, 2 million. 5 million, however, million we want. And we're always going to be keeping only 12 kilobytes worth of data.
+
+[<img src="./pictures/hyperlogslogs.png" width="50%"/>](./pictures/hyperlogslogs.png)
+
+- And it comes back to this downside. I had used the word approximately counting. That is the downside because the Hyperlogslogs doesn't actually truly store these individual items. It only stores a kind of approximation or representation of what it thinks it might have seen in the past, through the use of, like I said, a very fancy algorithm.
+- So that is the approximate nature here, and this is the tradeoff we make for not actually storing the original individual items.
+- I might not want to use a Hyperlogslogs if I'm trying to keep track of, say, unique user names or unique email addresses. But if it's something like views, I will make that trade off happily.
