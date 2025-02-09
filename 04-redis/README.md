@@ -108,3 +108,25 @@
 `LRANGE temps 0 -2`
 
 - starting to second last.
+
+[<img src="./pictures/lpos.png" width="50%"/>](./pictures/lpos.png)
+
+`LPOS temps 25`
+
+`LPOS temps 27`
+
+`LPOS temps 33453`
+
+- lpos for a not existing value will return nil.
+
+`LPOS temps 25 RANK 1`
+
+`LPOS temps 25 RANK 2`
+
+- So if I do a rank 2, that means ignore the first instance of 25 and instead find the second instance.
+
+`LPOS temps 25 COUNT 2`
+
+`LPOS temps 25 COUNT 3`
+
+- We are not able to find three instances, so we're just gonna be told about the first two that were actually found.
