@@ -46,3 +46,35 @@
 - And it comes back to this downside. I had used the word approximately counting. That is the downside because the Hyperlogslogs doesn't actually truly store these individual items. It only stores a kind of approximation or representation of what it thinks it might have seen in the past, through the use of, like I said, a very fancy algorithm.
 - So that is the approximate nature here, and this is the tradeoff we make for not actually storing the original individual items.
 - I might not want to use a Hyperlogslogs if I'm trying to keep track of, say, unique user names or unique email addresses. But if it's something like views, I will make that trade off happily.
+
+# Lists
+
+[<img src="./pictures/lists.png" width="50%"/>](./pictures/lists.png)
+
+`LPUSH temps 25`
+
+`RPUSH temps 27`
+
+`LLEN temps`
+
+`LINDEX temps 0`
+
+`LINDEX temps 1`
+
+`LINDEX temps 2`
+
+`LINDEX temps -1`
+
+- So if We put in a -1, that means go -1, go all the way to the very end of the index or the very end of the list,
+
+`LINDEX temps -2`
+
+- We could put in even more negative numbers, which means go further back from the end a list.
+
+`LINDEX temps -3`
+
+[<img src="./pictures/list_commands.png" width="50%"/>](./pictures/list_commands.png)
+
+[<img src="./pictures/lpush_rpush.png" width="50%"/>](./pictures/lpush_rpush.png)
+
+[<img src="./pictures/llen_lindex.png" width="50%"/>](./pictures/llen_lindex.png)
