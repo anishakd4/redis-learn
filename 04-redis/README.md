@@ -171,3 +171,17 @@
 # Donot use lists cases
 
 [<img src="./pictures/list_donot_use.png" width="50%"/>](./pictures/list_donot_use.png)
+
+- So if you have many records in a list, then you probably do not want to use a list at all, any time that you need to apply some filtering criteria to the elements in the list, you might have noticed that in all the commands we looked at, there was no filter command. There was no ability for us to go through each element in red itself and specifically say, Give me all the elements that are greater than or less than to something.
+
+- Another scenario in which we probably don't want to use a list is any time our data is sorted by some attribute other than time or insertion order. So if we are trying to sort by say alphabetical order, that would be really challenging to do with a list.
+
+[<img src="./pictures/redis_list_use_case.png" width="50%"/>](./pictures/redis_list_use_case.png)
+
+[<img src="./pictures/redis_list_use_case_2.png" width="50%"/>](./pictures/redis_list_use_case_2.png)
+
+[<img src="./pictures/redis_list_use_case_2_1.png" width="50%"/>](./pictures/redis_list_use_case_2_1.png)
+
+- We could obviously use a sorted set here instead where all the members are, the temperatures and the actual scores would be maybe a timestamp of when the record was collected or the recording was collected. But another way we could do this is by using a list
+
+- So I've got all these records there, all sorted in the correct time, and I know a lot more information about each one.
