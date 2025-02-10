@@ -156,3 +156,10 @@
 [<img src="./pictures/lrem.png" width="50%"/>](./pictures/lrem.png)
 
 [<img src="./pictures/lrem_2.png" width="50%"/>](./pictures/lrem_2.png)
+
+[<img src="./pictures/lrem_3.png" width="50%"/>](./pictures/lrem_3.png)
+
+[<img src="./pictures/lrem_4.png" width="50%"/>](./pictures/lrem_4.png)
+
+`LREM temps 0 24`
+`LRANGE temps 0 -1`
