@@ -163,3 +163,11 @@
 
 `LREM temps 0 24`
 `LRANGE temps 0 -1`
+
+# List use cases
+
+[<img src="./pictures/list_use_cases.png" width="50%"/>](./pictures/list_use_cases.png)
+
+# Donot use lists cases
+
+[<img src="./pictures/list_donot_use.png" width="50%"/>](./pictures/list_donot_use.png)
